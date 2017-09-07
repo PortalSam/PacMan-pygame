@@ -1,2 +1,2 @@
-# PacMan-pygame
-Coding PacMan in pygame.
+# Pygame Projects
+The projects that I've made using pygame.
