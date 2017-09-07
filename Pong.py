@@ -52,17 +52,12 @@ def moveBall(ball, x_position, y_position):
     return ball
 
 #CPU
-def CPU(ball, y_position, computer):
-    #If ball is moving away from computer, center computer
-    if y_position >= 360:
-            computer.y += 8
+def CPU(ball, y_position, computer):    
     #If ball moving towards computer, track its movement
-    elif y_position <= 360:
-            computer.y -= 8
-    if computer.centery < ball.centery:
-        computer.y += 8
-    else:
-        computer.y -= 8
+    if ball.bottom >= computer.bottom:
+            computer.bottom = ball.bottom
+    elif ball.top <= computer.top:
+            computer.top = ball.top
     return computer
 
 x_position = 30
